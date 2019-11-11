@@ -1,0 +1,390 @@
+
+/* Style for Navigation Bar*/
+
+header {
+	background: white;
+	padding: 15px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: inline;
+}
+
+header:before, header:after { content:""; display: table; }
+header:after {clear: both; }
+header {zoom: 1;}
+
+a.nav-menu {
+	padding: 0 30px;
+	float: right;
+	color: black;
+	background: transparent;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 22px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+a.nav-menu:hover, a.nav-menu:focus {
+	background-color: white;
+	color: #1f77b4;
+	text-decoration: line-through;
+}
+
+nav ul {
+	list-style: none;
+	background: transparent;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+nav li a {
+	display: block;
+	color: black;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+nav li a:hover, nav li a:focus {
+	background-color: transparent;
+	color: #1f77b4;
+	box-sizing: 50px 80px;
+	text-decoration: line-through;
+}
+
+/* Inspired by Ian Yates, webdesign.tutsplus.com, 22 Feb 2012*/
+
+/* General Styling */
+
+html {
+	scroll-behavior: smooth;
+	}
+
+
+body {
+	margin-top: 100px;
+
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
+	font-size: 21px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 400; 
+	line-height: 30px; 
+
+	background-image: url("../images/general/analytics_logo.png");
+	background-repeat: no-repeat;
+	background-position: -50% -300%;
+	background-size: 1000px;
+
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+h1 { 
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
+	font-size: 24px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 400; 
+	line-height: 12px; 
+	text-align: center;
+	padding-bottom: 20px;
+	color: #1f77b4;
+} 
+
+h2 {
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
+	font-size: 18px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 400; 
+	line-height: 12px; 
+	text-align: left;
+	color: #1f77b4;
+}
+
+span {
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
+	font-size: 24px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 400; 
+	line-height: 12px; 
+	text-align: left;
+	color: #1f77b4;
+}
+
+p { 
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; 
+	font-size: 16px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: 400; 
+	line-height: 22px; 
+	padding-right: 10px;
+	padding-left: 10px;	
+} 
+
+
+p + p {
+	margin-top: 15px;
+}
+
+/* Skip to Main */
+
+a.skip-main {
+	text-decoration: none;
+	color: white;
+	font-size: 8px;
+	margin: 0;
+	padding: 0;
+}
+
+a.skip-main:focus, a.skip-main:active {
+	text-decoration: underline;
+	color: blue;
+}
+
+
+/* Grid Container */
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 4fr; 
+	grid-gap: 10px;
+}
+
+/* Overall Page Specific Styling */
+
+.desc {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.tableauPlaceholder {
+	margin: 0 auto;
+	padding: 30px;
+}
+
+.tableau-wrapper {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+
+/* Gallery Styling */
+
+.container {
+	max-width: 100%;
+	height: auto;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.container-form {
+	max-width: 100%;
+	height: auto;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.gallery {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: visible;
+	max-height: 750px;
+}
+
+
+.animate {
+	flex: 100%;
+	height: 700px;
+	position: relative;
+	justify-content: space-around;
+}
+
+.content {
+	height: 700px;
+	position: absolute;
+	-webkit-transition: opacity 1s ease-in-out;
+  	-moz-transition: opacity 1s ease-in-out;
+  	-o-transition: opacity 1s ease-in-out;
+  	transition: opacity 1s ease-in-out;
+
+}
+
+.content img {
+	width: 90%;
+	height: 90%;
+}
+
+.content img:hover {
+	opacity: 0.3;
+	display: none;
+}
+
+.reveal {
+	width: 90%;
+	height: 95%;
+	transition: .5s ease;
+	position: absolute;
+	opacity: 0;
+	text-align: center;
+	background-color: #1f77b4;
+	line-height: 665px;
+}
+
+.animate:hover .reveal{
+	opacity: 1;
+}
+
+.reveal a {
+	width: 80%;
+	height: 100%;
+	color: white;
+	text-decoration: none;
+	font-size: 44px;
+}
+
+/* Style for Footer */
+
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 40px;
+	background-color: white;
+	text-align: center;
+}
+
+footer a {
+	color: black;
+	text-decoration: none;
+	bottom: 5px;
+	font-size: 16px;
+}
+
+footer a:hover {
+	color: #1f77b4;
+	background-color: white;
+	text-decoration: line-through;
+
+}
+
+
+/* Media Queries */
+
+/* For Tablets */
+@media screen and (min-width: 800px) {
+	a.nav-menu {
+		font-size: 18px;
+	}
+
+}
+
+
+/* For Desktops */
+@media screen and (min-width: 1375px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		grid-template-rows: 75px 1fr;
+		grid-gap: 10px;
+	}
+
+	.container {
+		max-width: 100%;
+		height: auto;
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.container-form {
+		max-width: 100%;
+		height: auto;
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.gallery {
+		overflow: scroll;
+	}
+
+	.desc {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	.tableau-wrapper {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	header {
+		background: transparent;
+		position: relative;
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	body {
+		margin-top: 0px;
+	}
+
+	a.nav-menu {
+		display: none;
+	}
+
+	nav {
+        grid-column: 2;
+        grid-row: 1;
+    }
+     
+    nav li {
+        display: inline;
+    }
+     
+    nav li a {
+    	float: left;
+    	font-size: 18px;
+        border: none;
+        padding: 0 15px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+	nav a.selected {
+		background-color: transparent;
+		color: #1f77b4;
+		text-decoration: line-through;
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+
+	html {
+		scroll-behavior: auto;
+	}
+
+	.content {
+		-webkit-transition: 0s;
+	  	-moz-transition: 0s;
+	  	-o-transition: 0s;
+	  	transition: 0s;
+
+	}
+
+}
+
+
